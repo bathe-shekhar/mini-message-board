@@ -1,0 +1,19 @@
+<div class="single-message">
+    <div class="message-content">
+        <h3>
+            <%= message.text %>
+        </h3>
+        <p class="message-user">
+            Posted by - <%= message.user %>
+        </p>
+        <p class="message-added">
+            Posted on: <%= message.added.toLocaleDateString() %> at
+                <%= message.added.toLocaleTimeString([], {hour: '2-digit' , minute:'2-digit'}) %>
+        </p>
+    </div>
+    <div class="message-next">
+        <a href="/message/<%=index %>">
+            >
+        </a>
+    </div>
+</div>

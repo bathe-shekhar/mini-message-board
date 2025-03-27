@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>Mini Message Board</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+
+<body>
+  <div class="container">
+    <h1 style="text-align: center;"> Mini Message Board</h1>
+    <div class="border-div"></div>
+    <div class="message-block">
+      <div class="message-block-title">
+        <div class="message-block-title-text">
+          <h3>Messages:</h3>
+        </div>
+        <div class="message-block-count">
+          <%- messages.length %> messages
+        </div>
+      </div>
+      <% messages.forEach((message,index)=>{ %>
+        <%- include('singleMessage',{message: message, index: index}); %>
+          <% }); %>
+    </div>
+    <div class="border-div"></div>
+    <div class="button-block">
+      <a href="/new">Post New Message</button>
+    </div>
+  </div>
+</body>
+
+</html>

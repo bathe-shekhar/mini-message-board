@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;"> Message</h1>
+        <div class="border-div"></div>
+        <div class="message-block single-message-view-block">
+            <div class="message-content">
+                <h3>
+                    <%= message.text %>
+                </h3>
+                <p class="message-user">
+                    Posted by - <%= message.user %>
+                </p>
+                <p class="message-added">
+                    Posted on: <%= message.added.toLocaleDateString() %> at
+                        <%= message.added.toLocaleTimeString([], {hour: '2-digit' , minute:'2-digit'}) %>
+                </p>
+            </div>
+        </div>
+        <div class="border-div"></div>
+        <div class="button-block">
+            <a href="/">Back</button>
+        </div>
+    </div>
+</body>
+
+</html>
